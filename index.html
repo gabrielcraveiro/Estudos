@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    const tipo = '100 metros rasos';
+    const vencedores = ['Andre', 'Bruno', 'Caio'];
+
+    // Interessante que você pode no ES6 ocultar tipo: tipo
+    const corrida = vencedores.map((vencedor, i) => ({
+      name: vencedores,
+      tipo,
+      lugar: i + 1
+    }))
+
+    // Com filter
+
+    const idade = [10, 20, 40, 30, 15, 70];
+    const novos = idade.filter(idade => idade <= 20);
+    console.log(novos); // [10, 20, 15]
+
+    let a = 10;
+    let b = 20;
+
+    [a, b] = [b, a]
+
+    function spinWords(str) {
+      //TODO Have fun :)
+      var res = str.split(" ");
+      console.log(res)
+      res.forEach(function (x) {
+        if (x.length > 5) {
+          x.split("").reverse().join("");
+        }
+      });
+      res.join(" ");
+      return res;
+    }
+  </script>
+  <h1>1</h1>
+  <h1>2</h1>
+  <h1>3</h1>
+  <button onlick="teste()">dasdas</button>
+</body>
+
+</html>
