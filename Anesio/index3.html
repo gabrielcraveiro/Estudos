@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+
+  <style>
+    body,
+    ul,
+    li,
+    p,
+    h1,
+    h2 {
+      font-family: 'Fira Sans';
+      color: #666;
+      font-size: 16px;
+    }
+
+    .texto {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .div_centro {
+      margin-top: 20vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sombra {
+      -webkit-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+      -moz-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+      box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+    }
+
+    .input_search {
+      /* Fonte */
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 2.2em;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      /* Tamanho e Sombra */
+      width: 30%;
+      border: 1px solid #ccc;
+      height: 44px!important;
+    }
+
+    .input_submit {
+      height: 42px;
+      border: none;
+      background: white;
+      color: #666;
+      top: 1px;
+      border: 1px solid #ddd;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    .table {
+      margin-top: 30px;
+    }
+
+    ul {}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="columns">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="div_centro">
+            <h2 class="has-text-centered">Bem vindo</h2>
+            <br>
+            <form action="" class="has-text-centered">
+              <input maxlength="2048" name="q" autocomplete="off" title="Pesquisar" type="text" value="" spellcheck="false" class="input_search sombra"
+                style="" placeholder="Login" />
+              <br>
+              <input maxlength="2048" name="q" autocomplete="off" title="Pesquisar" type="text" value="" spellcheck="false" class="input_search sombra"
+                style="" placeholder="Senha" />
+              <br>
+              <a href="principal.html">              <input type="Submit" value="Entrar" name="Carregar XLS" class="input_submit sombra" style="width: 8%"/></a>
+              <!--<input type="submit" value="Procurar" name="procurar" class="input_submit sombra" />-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

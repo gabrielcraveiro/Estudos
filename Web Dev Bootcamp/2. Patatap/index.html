@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="text/javascript" src="assets/js/paper-full.js"></script>
+  <script type="text/paperscript" canvas="myCanvas">
+    var path = new Path();
+    path.strokeColor = 'red';
+    var start = new Point(100, 100);
+    path.moveTo(start);
+    path.lineTo(start + [100, -50]);
+
+    var myCircle = new Path.Circle(new Point(100, 70), 50);
+    myCircle.fillColor = 'black';
+
+    var myCircle2 = new Path.Circle(new Point(100, 70), 20);
+    myCircle2.fillColor = 'red';
+  </script>
+</head>
+
+<body>
+  <canvas id="myCanvas" resize></canvas>
+</body>
+
+</html>

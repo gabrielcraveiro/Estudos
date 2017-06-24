@@ -1,0 +1,13 @@
+.asd {
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+  box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+  height: 44px!important;
+  line-height: 2.5em;
+  line-align: start;
+  line-indent: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

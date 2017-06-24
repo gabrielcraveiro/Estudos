@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+
+  <style>
+    body,
+    ul,
+    li,
+    p,
+    h1,
+    h2 {
+      font-family: 'Fira Sans';
+      color: #666;
+      font-size: 16px;
+    }
+
+    ul {}
+
+    .texto {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .div_centro {
+      margin-top: 20vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sombra {
+      -webkit-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+      -moz-box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+      box-shadow: 0px 2px 5px 0px rgba(204, 204, 204, 1);
+    }
+
+    .input_search {
+      /* Fonte */
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 2.2em;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      /* Tamanho e Sombra */
+      width: 100%;
+      border: 1px solid #ccc;
+      height: 44px!important;
+    }
+
+    .input_submit {
+      height: 42px;
+      border: none;
+      background: white;
+      color: #666;
+      top: 1px;
+      border: 1px solid #ddd;
+      margin-top: 30px;
+    }
+
+    .table {
+      margin-top: 30px;
+    }
+
+    ul {}
+  </style>
+
+</head>
+
+<body>
+  <div class="columns">
+    <div class="column is-4"></div>
+    <div class="column is-4 has-text-right">
+      <div class="div_centro">
+        <!--<ul class="has-text-left">
+          <li>Pesquisar Alunos: </li>
+          <li class="texto">* Digite o nome de um aluno ou CPF</li>
+          <li class="texto">* O aluno pode ter as informações editadas</li>
+        </ul>
+        <br>
+        <ul class="has-text-left">
+          <li>Carregar XLS </li>
+          <li class="texto">* Faça um upload com uma planilha para <br> efetuar cadastro no banco</li>
+        </ul>-->
+        <br>
+        <form action="">
+          <input maxlength="2048" name="q" autocomplete="off" title="Pesquisar" type="text" value="" spellcheck="false" class="input_search sombra"
+            style="" placeholder="Digite nome ou CPF do aluno" />
+          <input type="submit" value="Cadastro de Alunos" name="cadastro" class="input_submit sombra" />
+          <!--<input type="submit" value="Procurar" name="procurar" class="input_submit sombra" />-->
+        </form>
+      </div>
+    </div>
+    <div class="column is-4"></div>
+  </div>
+  <div class="columns">
+    <div class="container">
+      <div class="column-is-half has-text-centered">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th><abbr title="CPF">CPF</abbr></th>
+              <th><abbr title="Nome">Nome</abbr></th>
+              <th><abbr title="Data">Data Nascimento</abbr></th>
+              <th>Matricula</th>
+              <th><abbr title="Email">Email</abbr></th>
+              <th><abbr title="Curso">Curso</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>47025525532</th>
+              <td>Pedro Ander</td>
+              <td>13/02/1997</td>
+              <td>43482342394</td>
+              <td>loremipsumdolor@ammet.com</td>
+              <td>SI</td>
+            </tr>
+            <tr>
+              <th>47025525532</th>
+              <td>Andre Julis</td>
+              <td>16/04/1997</td>
+              <td>43482342394</td>
+              <td>loremipsumdolor@ammet.com</td>
+              <td>SI</td>
+            </tr>
+            <tr>
+              <th>47025525532</th>
+              <td>Julio Pedro</td>
+              <td>27/05/1997</td>
+              <td>43482342394</td>
+              <td>loremipsumdolor@ammet.com</td>
+              <td>SI</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
