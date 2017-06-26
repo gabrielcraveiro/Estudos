@@ -1,8 +1,3 @@
-// Daniel Shiffman
-// https://www.kadenze.com/courses/the-nature-of-code
-// http://natureofcode.com/
-// Session 1: Random Walker
-
 var w;
 
 function setup() {
