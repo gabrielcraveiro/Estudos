@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Quicksand:200,100,400" rel="stylesheet" type="text/css" />
+  <style>
+    .txt-rotate>.wrap {
+      opacity: 1;
+      -webkit-animation: blink 1s infinite;
+      -moz-animation: blink 1s infinite;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        border-right: 0.08em solid #fff;
+      }
+      50% {
+        border-right: 0.08em solid transparent;
+      }
+      100% {
+        border-right: 0.08em solid #fff;
+      }
+    }
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .card {
+      width: 800px;
+      height: 600px;
+      margin: auto;
+      border: none;
+      margin-top: 15vh;
+      background-color: #BDCCCE;
+      border-radius: 20px 20px 4px 4px;
+      box-shadow: 0 50px 100px rgba(50, 50, 93, .15), 0 15px 35px rgba(50, 50, 93, .2), 0 5px 15px rgba(0, 0, 0, .12);
+    }
+
+    .top {
+      height: 30px;
+      background-color: #e4e3e5;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .bottom {
+      background-color: #666385;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 50px 100px rgba(50, 50, 93, .15), 0 15px 35px rgba(50, 50, 93, .2), 0 5px 15px rgba(0, 0, 0, .12);
+    }
+
+    .right ul li {
+      display: inline-block;
+      margin-right: 30px;
+      color: white;
+    }
+
+    .header-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-left: 9px;
+    }
+
+    .green {
+      background-color: #33c948;
+      border: 1px solid #2dbb41;
+    }
+
+    .red {
+      background-color: #f96256;
+      border: 1px solid #f65549;
+    }
+
+    .yellow {
+      background-color: #fdbc3d;
+      border: 1px solid #ffb524;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+  </script>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="top">
+      <div class="header-button green"></div>
+      <div class="header-button red"></div>
+      <div class="header-button yellow"></div>
+    </div>
+  </div>
+
+  <!--
+  <span class="txt-rotate" data-period="2000" data-rotate='[ "valor.", "audiência.","clientes.", "gosto por comida mexicana.", "lucros!" ]'></span>-->
+  </header>
+
+  <script>
+    var TxtRotate = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">' + this.txt + ' </span>';
+
+      var that = this;
+      var delta = 150 - Math.random() * 100;
+
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
+
+    window.onload = function () {
+      var elements = document.getElementsByClassName('txt-rotate');
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+    };
+  </script>
+
+  <!--<script>
+    particlesJS("bg", {
+      "particles": {
+        "number": {
+          "value": 110,
+          "density": {
+            "enable": true,
+            "value_area": 315
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 0.1,
+            "opacity_min": 0.2,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 1,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 300,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);;
+  </script>-->
+
+</body>
+
+</html>
