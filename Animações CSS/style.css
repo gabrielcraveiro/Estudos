@@ -1,5 +1,14 @@
-.wrapper{
+.wrapper {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+}
+
+body {
+  background: lightblue;
+  text-align: center;
+}
+
+img {
+  transform: rotateX(180deg);
 }
