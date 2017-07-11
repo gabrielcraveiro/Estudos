@@ -10,6 +10,14 @@ p {
   color: #585858;
 }
 
+
+/* HEADER */
+
+header {
+  margin-top: 10vh;
+  margin-bottom: 50px;
+}
+
 header h2 {
   font-size: 6rem;
   margin-top: 20px;
@@ -19,14 +27,6 @@ header p {
   margin-top: 20px;
   font-size: 2rem;
   color: #bbb;
-}
-
-
-/* HEADER */
-
-header {
-  margin-top: 10vh;
-  margin-bottom: 50px;
 }
 
 
@@ -70,11 +70,14 @@ header {
 .nav-button {
   padding: 8px 8px 8px 32px;
   margin-right: 30px;
-  font-size: 7rem!important;
   position: absolute;
   top: 0;
   right: 0;
   color: #ddd;
+}
+
+.nav-button img {
+  height: 5rem;
 }
 
 .nav-button:hover {
@@ -84,6 +87,10 @@ header {
 #main {
   transition: margin-left .5s;
   padding: 20px;
+}
+
+.container-fluid {
+  margin: 0 14% 0 14%;
 }
 
 
@@ -99,7 +106,7 @@ header {
   filter: grayscale(80%);
   transition: 1s;
   border-radius: 1%;
-  width: 100%;
+  width: 120%;
 }
 
 .thumbnail img:hover {
@@ -109,19 +116,13 @@ header {
   width: 100%;
 }
 
-.row > .col-md-4 {
+.row>.col-md-4 {
   padding: 0;
 }
 
-.row > .col-md-4 > .thumbnail {
+.row>.col-md-4>.thumbnail {
   margin: 0;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
+
+/* Contact  */

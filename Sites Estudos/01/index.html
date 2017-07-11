@@ -26,63 +26,89 @@
 <body>
 
   <nav id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn nav-button" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn nav-button" onclick="closeNav()"><img src="img/icon-menu.svg" alt=""></a>
     <h3>Menu</h3>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
+    <a href="#">Home</a>
+    <a href="#">Photos</a>
     <a href="#">Contact</a>
   </nav>
 
 
-  <button class="">      
-    <a href="javascript:void(0)" class="nav-button" style="position:fixed" onclick="openNav()">&times;</a>
-  </button>
+  <a href="javascript:void(0)" class="nav-button" style="position:fixed" onclick="openNav()"><img src="img/icon-menu.svg" alt=""></a>
 
-  <section class="container">
+  <section class="container-fluid">
     <!-- Example row of columns -->
     <header class="row">
-      <div class="col-md-12">
-        <h1>Awesome Website!</h1>
-        <h2>This is an awesome website created by Gabriel Craveiro!</h2>
+      <div class="col-md-12 col-xs-12">
+        <h1>Simple Photo Portfolio!</h1>
+        <!--<h2>This is a website created by Gabriel Craveiro!</h2>-->
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae natus modi repudiandae, laudantium
           iste neque quis odio beatae molestias.</p>
+        <p>Created using Bootstrap 3 and Medium Zoom!</p>
       </div>
     </header>
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-12">
+        <h2>Photos <span style="font-size: 1.2rem; color: #ccc">Click one!</span></h2>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img7.jpg" alt=""></div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img3.jpg" alt=""></div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img9.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img1.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img2.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img3.jpg" alt=""></div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img7.jpg" alt=""></div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img3.jpg" alt=""></div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="thumbnail"><img data-action="zoom" src="img/img9.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img4.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img5.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img6.jpg" alt=""></div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img7.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img3.jpg" alt=""></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="thumbnail"><img data-action="zoom" src="img/img9.jpg" alt=""></div>
       </div>
     </div>
+
+    <!-- Contact  -->
+
 
   </section>
 
@@ -111,12 +137,11 @@
       document.getElementById("mySidenav").style.width = "0";
     }
 
-      window.addEventListener('load', function () {
-        // Add the zoom effect to the hero image
-        mediumZoom(document.querySelectorAll('[data-action="zoom"]'))
+    window.addEventListener('load', function () {
+      // Add the zoom effect to the hero image
+      mediumZoom(document.querySelectorAll('[data-action="zoom"]'))
 
-      })
-
+    })
   </script>
 
 </body>
