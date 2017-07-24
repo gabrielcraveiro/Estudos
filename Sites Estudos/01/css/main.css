@@ -96,20 +96,30 @@ header p {
 
 /* IMG */
 
+.photo-grid img {
+  width: 100%;
+  filter: grayscale(80%);
+  margin: 0;
+}
+
+.photo-big {
+  padding: 4px;
+}
+
 .thumbnail {
   border: none;
 }
 
-.thumbnail img {
+img {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
-  filter: grayscale(80%);
   transition: 1s;
-  border-radius: 1%;
-  width: 120%;
+  width: 500px;
+  height: 100%;
+  padding: 3px;
 }
 
-.thumbnail img:hover {
+img:hover {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
