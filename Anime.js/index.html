@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body {
+      background: #fff;
+    }
+
+    .square {
+      background: #000;
+      width: 20px;
+      height: 20px;
+    }
+
+    .wrapper {
+      background: #ff95bd;
+      width: 80vw;
+      height: 70vh;
+      margin: auto;
+      margin-top: 15vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="lineDrawing">
+      <svg viewBox="0 0 280 100">
+        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+        
+          <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+            stroke-dasharray="316.85528564453125"></path>
+          <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+            stroke-dasharray="316.85528564453125"></path>
+          <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+            stroke-dasharray="316.85528564453125"></path>
+          <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+            stroke-dasharray="316.85528564453125"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <script>
+   var lineDrawing = anime({
+    targets: '#lineDrawing .lines path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: function(el, i) { return i * 250 },
+    direction: 'alternate',
+    loop: false
+  });
+  </script>
+</body>
+
+</html>
